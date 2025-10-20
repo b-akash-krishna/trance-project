@@ -1,0 +1,41 @@
+{
+  "project": {
+    "name": "TRANCE",
+    "version": "1.0.0",
+    "description": "Temporal Readmission Analysis with Neural Clinical Embeddings"
+  },
+  "data": {
+    "mimic_demo_url": "https://physionet.org/content/mimiciii-demo/1.4/",
+    "cohort": {
+      "min_age": 18,
+      "min_los_hours": 24,
+      "readmission_window_days": 30
+    }
+  },
+  "model": {
+    "embedding_model": "luqh/ClinicalT5-large",
+    "embedding_dim": 768,
+    "max_text_length": 512,
+    "chunk_overlap": 128
+  },
+  "training": {
+    "test_size": 0.2,
+    "calibration_size": 0.1,
+    "random_state": 42,
+    "lgbm_params": {
+      "objective": "binary",
+      "metric": "auc",
+      "boosting_type": "gbdt",
+      "num_leaves": 31,
+      "learning_rate": 0.05,
+      "feature_fraction": 0.9
+    }
+  },
+  "paths": {
+    "raw_data": "data/raw",
+    "processed_data": "data/processed",
+    "embeddings": "data/embeddings",
+    "models": "outputs/models",
+    "figures": "outputs/figures"
+  }
+}

@@ -1,0 +1,62 @@
+# Data files
+data/raw/*
+data/processed/*
+data/embeddings/*
+*.csv
+*.db
+*.sqlite
+*.parquet
+*.h5
+*.hdf5
+
+# Model files
+outputs/models/*
+*.pkl
+*.joblib
+*.pt
+*.pth
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+mlruns/
+
+# Secrets
+.env
+secrets.json
+credentials.json
+
+# Large files
+*.zip
+*.tar.gz
+*.7z
+
+# But keep directory structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/embeddings/.gitkeep
+!outputs/models/.gitkeep
