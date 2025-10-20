@@ -2,12 +2,15 @@
 data/raw/*
 data/processed/*
 data/embeddings/*
+outputs/figures/*
+outputs/results/*
 *.csv
 *.db
 *.sqlite
 *.parquet
 *.h5
 *.hdf5
+*.png
 
 # Model files
 outputs/models/*
